@@ -25,7 +25,5 @@ def mergesort(arr,n):
         arr[k] = right[j]
         k += 1
         j += 1
-    print(len(left),len(right))
-    print(mid,n-mid)
     return(arr)
 

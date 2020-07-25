@@ -1,10 +1,14 @@
 def sum_array(array):
+    if array == []:
+        return
     if len(array) == 1:
         return(array[0])
     else:
         return(array[0]+sum_array(array[1:]))
 
 def max_element(array):
+    if array == []:
+        return
     if len(array) == 1:
         return(array[0])
     if len(array) == 2:
@@ -13,6 +17,8 @@ def max_element(array):
         return(max(array[-1],max_element(array[:-1])))
 
 def min_element(array):
+    if array == []:
+        return
     if len(array) == 1:
         return(array[0])
     if len(array) == 2:
@@ -22,6 +28,8 @@ def min_element(array):
 
 def count_element(num,array):
     count = 0
+    if array == []:
+        return(0)
     if len(array) == 1:
         if num == array[0]:
             return(1)
@@ -31,3 +39,4 @@ def count_element(num,array):
         count += count_element(num,array[:-1])
     return(count)
 
+count_element(3,[])
