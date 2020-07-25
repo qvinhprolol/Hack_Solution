@@ -10,6 +10,10 @@ def GCD(a,b):
     return(GCD(a,b-a))
 
 def simplifyfraction(a,b):
-    m = GCD(a,b)
-    print(str(int(a/m))+'/'+str(int(b/m)))
-
+    if b == 0:
+        print('Not valid fraction')
+    elif a == 0:
+        print(str(a)+'/'+str(b))
+    else:
+        m = GCD(a,b)
+        print(str(int(a/m))+'/'+str(int(b/m)))

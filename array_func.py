@@ -24,7 +24,7 @@ def min_element(array):
     if len(array) == 2:
         return(min(array[0],array[1]))
     else:
-        return(min(array[-1],max_element(array[:-1])))
+        return(min(array[-1],min_element(array[:-1])))
 
 def count_element(num,array):
     count = 0
@@ -39,4 +39,4 @@ def count_element(num,array):
         count += count_element(num,array[:-1])
     return(count)
 
-count_element(3,[])
+print(min_element([3,2,1,21]))
